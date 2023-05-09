@@ -2,7 +2,7 @@ from flask import Flask
 app = Flask(__name__)
 @app.route('/')
 def head():
-    return 'Hello world Oktay'
+    return 'Her şey güzel olacak'
 @app.route('/second')
 def second():
     return 'This is second page'

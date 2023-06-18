@@ -146,7 +146,7 @@ Resources:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
       DefaultActions: # Required
-        - TargetGroupArn: !Ref MyTargetGrp  # !GetAtt MyTargetGrp.TargetGroupArn veya !GetAtt murattargetgrpcfn.TargetGroupName  şeklinde de olurdu.
+        - TargetGroupArn: !Ref MyTargetGrp  # !GetAtt MyTargetGrp.TargetGroupArn şeklinde de olurdu.
           Type: forward
       LoadBalancerArn: !Ref MyELB # Required
       Port: 80
@@ -165,7 +165,7 @@ Resources:
       MaxSize: 4 # Required
       MinSize: 1 # Required
       TargetGroupARNs: 
-        - !Ref MyTargetGrp  # !GetAtt MyTargetGrp.TargetGroupArn veya !GetAtt murattargetgrpcfn.TargetGroupName  şeklinde de olurdu.
+        - !Ref MyTargetGrp  # !GetAtt MyTargetGrp.TargetGroupArn şeklinde de olurdu.
       VPCZoneIdentifier: !Ref Subnets
 
   MyASGPolicy:

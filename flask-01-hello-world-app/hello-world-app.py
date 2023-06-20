@@ -2,7 +2,7 @@ from flask import Flask
 app = Flask(__name__)
 @app.route('/')
 def head():
-    return 'boynumuz eğik..'
+    return 'basimiz dik!'
 @app.route('/second')
 def second():
     return 'This is second page'
@@ -13,5 +13,5 @@ def third():
 def forth(id):
     return f'Id of this page is {id}'
 if __name__ == '__main__':
-    # app.run(debug=True)
+    app.run(debug=True)
     app.run(host= '0.0.0.0', port=80)
